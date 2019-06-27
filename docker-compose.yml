@@ -1,0 +1,14 @@
+version: "2"
+services:
+  burrow:
+    image: "vvangari/burrow:1.0"
+    ports:
+      - 8005:8005
+    environment: 
+      KAFKA_VERSION: '"2.2.0"'
+      KAFKA_BROKERS: '"localhost:9093"'
+      ZOOKEEPER_SERVERS: '"localhost:2181"'
+      ZOOKEEPER_PATH: '"/burrow"'
+      BURROW_KAFKA_USERNAME: '"demouser"'
+      BURROW_KAFKA_PASSWORD: '"secret"'
+      SHA_ALGORITHM: '"sha512"'
